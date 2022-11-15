@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        newTodo: '',
         toDoList: [
           {
               task: "Fare la spesa",
@@ -25,6 +26,15 @@ const { createApp } = Vue
         ]
       }
       
+    },
+    methods:{
+      addTodo(){
+        this.toDoList.push(this.newTodo);
+        this.newTodo='';
+      },
+      removeToDo(index){
+this.toDoList.splice(index, 1);
+      },
     }
   }).mount('#app')
-  console.log(toDoList);
+ 

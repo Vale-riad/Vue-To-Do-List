@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <body>
     <div id="app" class="container">
     <div class="logo">
         <img src="img/logo.png">
     </div>
-    <form class="new-task">
-        <input type="text" placeholder="Inserisci una task">
+    <form class="new-task" @submit.prevent="addTodo" >
+        <input type="text" placeholder="Inserisci una task" v-model="newTodo" required>
         <button type="submit">Aggiungi task</button>
     </form>
     <div class="tasks-container">
         <ul>
-            <li class="task">
-                <i class="fas fa-times"></i>
+            <li class="task" v-for="(todo,index) in toDoList">{{todo.task}}</li>
+            <span @click="removeToDo(index)"><i class="fa-solid fa-xmark"></i></span>
             </li>
         </ul>
+      
     </div>
     </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
