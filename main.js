@@ -29,8 +29,9 @@ const { createApp } = Vue
     },
     methods:{
       addTodo(){
-        this.toDoList.push(this.newTodo);
         this.newTodo='';
+        this.toDoList.push(this.newTodo);
+   
       },
       removeToDo(index){
 this.toDoList.splice(index, 1);

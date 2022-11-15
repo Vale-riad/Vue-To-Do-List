@@ -14,13 +14,13 @@
     <div class="logo">
         <img src="img/logo.png">
     </div>
-    <form class="new-task" @submit.prevent="addTodo" >
+    <form class="new-task"   @submit.prevent="addTodo" >
         <input type="text" placeholder="Inserisci una task" v-model="newTodo" required>
         <button type="submit">Aggiungi task</button>
     </form>
     <div class="tasks-container">
         <ul>
-            <li class="task" v-for="(todo,index) in toDoList">{{todo.task}}</li>
+            <li class="task" v-for="(todo,index) in toDoList" :class="todo.done ? 'line' : ''">{{todo.task}}</li>
             <span @click="removeToDo(index)"><i class="fa-solid fa-xmark"></i></span>
             </li>
         </ul>

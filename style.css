@@ -13,7 +13,6 @@
    }
 img{
     width:400px;
-
 }
 .new-task{
     align-items: center;
@@ -31,7 +30,6 @@ button{
     border-radius: 10px;
     border-color: lightgray; 
 }
-
 .tasks-container{
     margin-top: 50px;
     width: 100%;
@@ -42,6 +40,10 @@ button{
 .task{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
+    border-bottom: 1px solid gray;
 }
-
+.line{
+    text-decoration: line-through;
+}
 
