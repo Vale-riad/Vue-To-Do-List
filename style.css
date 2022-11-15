@@ -3,3 +3,44 @@
     margin: 0;
     padding:0;
 }
+.container{
+    width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+   }
+img{
+    width:400px;
+
+}
+.new-task{
+    align-items: center;
+    margin:30px;
+}
+input{
+    margin:30px;
+    padding:10px 20px 10px 20px;
+    border-radius: 10px;
+    border-color: lightgray; 
+    
+}
+button{
+    padding:10px 20px 10px 20px;
+    border-radius: 10px;
+    border-color: lightgray; 
+}
+
+.tasks-container{
+    margin-top: 50px;
+    width: 100%;
+    background-color: rgb(243, 241, 241);
+    border-radius: 20px;
+    padding: 25px;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+}
+
