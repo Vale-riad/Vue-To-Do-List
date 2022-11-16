@@ -15,16 +15,17 @@
         <img src="img/logo.png">
     </div>
     <form class="new-task"   @submit.prevent="addTodo" >
-        <input type="text" placeholder="Inserisci una task" v-model="newTodo" required>
+        <input type="text" placeholder="Inserisci una task" v-model="taskNewToDo" required>
         <button type="submit">Aggiungi task</button>
     </form>
     <div class="tasks-container">
-        <ul>
-            <li class="task" v-for="(todo,index) in toDoList" :class="todo.done ? 'line' : ''">{{todo.task}}</li>
-            <span @click="removeToDo(index)"><i class="fa-solid fa-xmark"></i></span>
+        <ul v-if="toDoList.length > 0">
+            <li class="task" v-for="(todo, index) in toDoList">
+                <span :class="{ 'line': todo.done }" @click="onClickTodo(todo)">{{ todo.task }}</span>
+                <i class="fas fa-times" @click="removeToDo(index)"></i>
             </li>
         </ul>
-      
+        <h2 v-else>Non sono presenti task</h2>
     </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

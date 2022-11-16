@@ -1,47 +1,67 @@
-*{
-    box-sizing: border-box;
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
 }
-.container{
-    width: 800px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-   }
-img{
-    width:400px;
+.container {
+    margin: 0 auto;
+    width: 70%;
+    height: 100vh;
 }
-.new-task{
-    align-items: center;
-    margin:30px;
+
+.logo {
+    margin: 20px 0;
+    text-align: center;
 }
-input{
-    margin:30px;
-    padding:10px 20px 10px 20px;
+
+.logo img {
+    max-width: 300px;
+}
+
+.new-task {
+    text-align: center;
+}
+
+.new-task input {
+    padding: 10px 20px;
     border-radius: 10px;
-    border-color: lightgray; 
-    
+    border-width: 1px;
+    min-width: 300px;
+    margin-right: 10px;
 }
-button{
-    padding:10px 20px 10px 20px;
+
+.new-task button {
+    padding: 10px 20px;
     border-radius: 10px;
-    border-color: lightgray; 
+    border-width: 1px;
+    cursor: pointer;
 }
-.tasks-container{
-    margin-top: 50px;
-    width: 100%;
-    background-color: rgb(243, 241, 241);
-    border-radius: 20px;
-    padding: 25px;
+
+.tasks-container {
+    margin: 40px; 
+    border-radius: 10px;
+    background: #F5F7F7;
+    padding: 30px;
 }
-.task{
+
+.tasks-container ul {
+    list-style: none;
+}
+
+.task {
+    border-bottom: 1px solid #DADEE1;
+    padding: 10px; 
+    cursor: pointer;
+}
+
+.task:hover {
+    background: white;
+}
+
+.task i {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    border-bottom: 1px solid gray;
+    justify-content: flex-end;
 }
 .line{
     text-decoration: line-through;
